@@ -1,8 +1,8 @@
 {
-  "license": "ISC",
+  "license": "Apache-2.0",
   "engines": {
-    "node": ">=12.13.1",
-    "npm": ">=6.13.0"
+    "node": ">=16.13.0",
+    "npm": ">=8.1.2"
   },
   "scripts": {
     "ci": "npm run lint && npm run test",
