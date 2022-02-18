@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 import StatementApi from '../lib/statement-api';
 
 class ChargeService {
@@ -7,17 +5,19 @@ class ChargeService {
     const billStatement = {};
     const recurringCharges = {};
 
-    _.forEach(StatementApi.getCharges(), (chargeInfo) => {
+    StatementApi.getCharges().forEach(chargeInfo => {
       if (billStatement[chargeInfo.name]) {
         billStatement[chargeInfo.name] += 1;
       } else {
-        _.set(billStatement, chargeInfo.name, 0);
+        billStatement[chargeInfo.name] = 0;
       }
     });
 
-    _.forEach(billStatement, (chargeCount, chargeName) => {
+    Object.entries(billStatement).forEach(entry => {
+      const[chargeName, chargeCount] = entry;
+
       if (chargeCount >= 1) {
-        _.set(recurringCharges, chargeName, chargeCount);
+        recurringCharges[chargeName] = chargeCount
       }
     });
 
