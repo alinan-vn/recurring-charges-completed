@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import StatementApi from '../lib/statement-api';
 
 class ChargeService {

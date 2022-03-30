@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import ChargeService from '../src/app/charge-service';
 import exampleData from '../src/config/example-data';
 import StatementApi from '../src/lib/statement-api';
