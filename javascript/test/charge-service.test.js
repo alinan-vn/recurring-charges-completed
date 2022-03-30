@@ -27,17 +27,17 @@ describe('ChargeService', () => {
       useExampleData();
       const recurringCharges = cardService.getRecurringCharges();
 
-      expect(_.get(recurringCharges, 'Spotify')).toBe(4);
-      expect(_.get(recurringCharges, 'Netflix')).toBe(4);
-      expect(_.get(recurringCharges, 'HBO Max')).toBe(2);
-      expect(_.get(recurringCharges, 'The New York Times Company')).toBe(2);
+      expect(recurringCharges['Spotify']).toBe(4);
+      expect(recurringCharges['Netflix']).toBe(4);
+      expect(recurringCharges['HBO Max']).toBe(2);
+      expect(recurringCharges['The New York Times Company']).toBe(2);
     });
 
     test('does not include charges that only occur once', () => {
       useExampleData();
       const recurringCharges = cardService.getRecurringCharges();
 
-      expect(_.get(recurringCharges, 'Lou Malnati\'s')).toBeUndefined();
+      expect(recurringCharges['Lou Malnati\'s']).toBeUndefined();
     });
 
     describe('when there are multiple one-time charges', () => {
@@ -71,8 +71,8 @@ describe('ChargeService', () => {
       test('does not include charges that only occur once', () => {
         const recurringCharges = cardService.getRecurringCharges();
 
-        expect(_.get(recurringCharges, 'Chipotle')).toBeUndefined();
-        expect(_.get(recurringCharges, 'Apple')).toBeUndefined();
+        expect(recurringCharges['Chipotle']).toBeUndefined();
+        expect(recurringCharges['Apple']).toBeUndefined();
       });
     });
   });
