@@ -16,7 +16,7 @@ class ChargeService {
     });
 
     Object.entries(billStatement).forEach(entry => {
-      const[chargeName, chargeCount] = entry;
+      const [chargeName, chargeCount] = entry;
 
       if (chargeCount >= 1) {
         recurringCharges[chargeName] = chargeCount
