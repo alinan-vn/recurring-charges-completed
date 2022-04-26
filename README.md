@@ -132,7 +132,7 @@ Run `npm test` to run the test suite
 * Java 8
 * [gradle](https://gradle.org/install/)
 
-### Installation
+### Setup
 
 * `cd java && ./gradlew build`
 
@@ -144,21 +144,19 @@ Run `./gradlew test` to run the test suite
 
 ### Dependencies
 
-* Python 3
-* [pip](https://pip.pypa.io/en/stable/installing/)
+* Python 3.7 or later (run `python3 --version` to check your version)
 
-### Installation
+### Setup
 
-* `pip install pipenv` (if you don't have pipenv)
-* `cd python && pipenv install`
+* `cd python`
 
 ### Tests
 
-Run `pipenv run python test.py` to run the test suite
+Run `python3 test.py` to run the test suite
 
 ## Ruby
 
-### Installation
+### Setup
 
 * `gem install bundler` (if you don't have bundler)
 * `cd ruby && bundle install`
